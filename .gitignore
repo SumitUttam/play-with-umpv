@@ -1,1 +1,4 @@
 *.pem
+*.eggs
+__pycache__ 
+*.egg-info
