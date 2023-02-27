@@ -25,7 +25,7 @@ def get_version():
             run('git', 'rev-parse', '--short', 'HEAD')))
 
 setup(
-    name = "play-with-mpv",
+    name = "play-with-umpv",
     version = get_version(),
     author = "Jonathan Knapp",
     author_email = "jaknapp8@gmail.com",
@@ -40,11 +40,11 @@ setup(
         "License :: OSI Approved :: MIT License",
     ],
 
-    py_modules=["play_with_mpv"],
-    install_requires=['wheel', 'youtube-dl'],
+    py_modules=["play_with_umpv"],
+    install_requires=['wheel'],
     entry_points={
         'gui_scripts': [
-            'play-with-mpv=play_with_mpv:start',
+            'play-with-umpv=play_with_umpv:start',
         ],
     },
     setup_requires=['wheel', 'install_freedesktop>=0.2.0'],
@@ -52,8 +52,8 @@ setup(
         "https://github.com/thann/install_freedesktop/tarball/master#egg=install_freedesktop-0.2.0"
     ],
     desktop_entries={
-        'play-with-mpv': {
-            'filename': 'thann.play-with-mpv',
+        'play-with-umpv': {
+            'filename': 'play-with-umpv',
             'Name': 'Play With MPV (server)',
             'Categories': 'AudioVideo;Audio;Video;Player;TV',
             'Comment': description,

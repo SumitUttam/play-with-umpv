@@ -47,8 +47,10 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler, CompatibilityMixin):
                     missing_bin('peerflix')
             else:
                 try:
-                    pipe = Popen(['mpv', urls, '--force-window'] +
-                                 query.get("mpv_args", []))
+                    #UMPV doesn't support any args so that is a downfall of using umpv
+                    #umpv allows user to add video to add video to playlist instead of opening new window everytime.
+                    #umpv requires more support to be usable.
+                    pipe = Popen(['umpv', urls])
                 except FileNotFoundError as e:
                     missing_bin('mpv')
             self.respond(200, "playing...")

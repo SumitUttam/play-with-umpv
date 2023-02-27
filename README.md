@@ -3,6 +3,14 @@ Chrome extension and python server that allows you to play videos in webpages wi
 Works on [hundreds of sites](https://rg3.github.io/youtube-dl/supportedsites.html) thanks to youtube-dl,
 and even torrents if you install [peerflix](https://github.com/mafintosh/peerflix).
 
+## Changes in this Fork
+This fork uses [umpv command](https://github.com/mpv-player/mpv/blob/master/TOOLS/umpv)
+By using umpv any video opened is queued in the mpv window already running from umpv.
+
+### Planned Changes
+Setting up a config file or args to switch between using mpv or umpv command.
+Working on a fork of umpv that allows passing args to mpv.
+  
 ## Installation
 1. Install [MPV](https://mpv.io/installation/)
 2. Install [python 2 or 3](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installing/)
